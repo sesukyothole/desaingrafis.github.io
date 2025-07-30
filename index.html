@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rencana Pembelajaran Desain Grafis - Agustus 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .timeline-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .timeline-line {
+            position: absolute;
+            width: 6px;
+            background-color: #3b82f6;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 3px;
+        }
+        .material-container {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+        }
+        .material-content {
+            padding: 20px 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .material-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .dot {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+            top: 40px;
+            z-index: 1;
+        }
+        .right .dot {
+            left: -12px;
+        }
+        h3 {
+            color: #1e40af;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .duration {
+            color: #6b7280;
+            font-weight: 500;
+        }
+        .detail-button {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .detail-button:hover {
+            background-color: #2563eb;
+        }
+        .details-container {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f9fafb;
+            border-radius: 5px;
+            border-left: 4px solid #3b82f6;
+        }
+        @media screen and (max-width: 768px) {
+            .timeline-line {
+                left: 31px;
+            }
+            .material-container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .right {
+                left: 0;
+            }
+            .left .dot, .right .dot {
+                left: 18px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-blue-800 mb-4">Rencana Pembelajaran Desain Grafis</h1>
+            <p class="text-xl text-gray-600">1-12 Agustus 2025 | 08.00 - 15.30 WIB</p>
+            <img src="https://placehold.co/800x300" alt="Ilustrasi desain grafis dengan komputer, tablet grafis, dan berbagai peralatan desain di atas meja kerja modern" class="mx-auto mt-6 rounded-lg shadow-lg">
+        </div>
+
+        <div class="timeline-container">
+            <!-- Timeline line -->
+            <div class="timeline-line"></div>
+
+            <!-- Tanggal 1 -->
+            <div class="material-container left">
+                <div class="material-content">
+                    <h3>1 Agustus 2025</h3>
+                    <p class="duration">08.00 - 15.30 WIB</p>
+                    <h4 class="text-xl font-semibold mb-2">Membuat Konten</h4>
+                    <p>Dasar-dasar penulisan naskah dan pembuatan ilustrasi grafis.</p>
+                    <button class="detail-button mt-3" onclick="toggleDetails('details-1')">Lihat Detail</button>
+                    <div class="details-container" id="details-1">
+                        <h5 class="font-semibold mb-2">Topik Pembelajaran:</h5>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Prinsip penulisan naskah untuk desain grafis</li>
+                            <li>Memahami anatomi ilustrasi yang efektif</li>
+                            <li>Membuat sketsa dasar ilustrasi</li>
+                            <li>Teknik storytelling visual</li>
+                        </ul>
+                        <h5 class="font-semibold mt-3 mb-2">Tools yang digunakan:</h5>
+                        <p>Adobe Illustrator, Figma, Pencil & Paper</p>
+                    </div>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Tanggal 2 -->
+            <div class="material-container right">
+                <div class="material-content">
+                    <h3>2 Agustus 2025</h3>
+                    <p class="duration">08.00 - 15.30 WIB</p>
+                    <h4 class="text-xl font-semibold mb-2">Adobe InDesign - Dasar</h4>
+                    <p>Pengaturan halaman, tipografi, dan gaya paragraf.</p>
+                    <button class="detail-button mt-3" onclick="toggleDetails('details-2')">Lihat Detail</button>
+                    <div class="details-container" id="details-2">
+                        <h5 class="font-semibold mb-2">Topik Pembelajaran:</h5>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Membuat dokumen baru dan mengatur halaman</li>
+                            <li>Pemilihan dan pengaturan font</li>
+                            <li>Formatting paragraf dan bullets</li>
+                            <li>Membuat dan menerapkan Paragraph Styles</li>
+                        </ul>
+                        <h5 class="font-semibold mt-3 mb-2">Praktikum:</h5>
+                        <p>Membuat layout artikel dengan berbagai gaya paragraf</p>
+                    </div>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Tanggal 3 -->
+            <div class="material-container left">
+                <div class="material-content">
+                    <h3>3 Agustus 2025</h3>
+                    <p class="duration">08.00 - 15.30 WIB</p>
+                    <h4 class="text-xl font-semibold mb-2">Adobe InDesign - Lanjutan</h4>
+                    <p>Membuat tabel profesional dan menambahkan gambar.</p>
+                    <button class="detail-button mt-3" onclick="toggleDetails('details-3')">Lihat Detail</button>
+                    <div class="details-container" id="details-3">
+                        <h5 class="font-semibold mb-2">Topik Pembelajaran:</h5>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Membuat dan memformat tabel</li>
+                            <li>Table Styles dan Cell Styles</li>
+                            <li>Menempatkan dan menyusun gambar</li>
+                            <li>Text wrap dan manipulasi gambar</li>
+                        </ul>
+                        <h5 class="font-semibold mt-3 mb-2">Praktikum:</h5>
+                        <p>Membuat dokumen data dengan tabel dan ilustrasi</p>
+                    </div>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Tanggal 4 -->
+            <div class="material-container right">
+                <div class="material-content">
+                    <h3>4 Agustus 2025</h3>
+                    <p class="duration">08.00 - 15.30 WIB</p>
+                    <h4 class="text-xl font-semibold mb-2">Adobe InDesign - Multimedia</h4>
+                    <p>Menambahkan elemen interaktif ke dokumen.</p>
+                    <button class="detail-button mt-3" onclick="toggleDetails('details-4')">Lihat Detail</button>
+                    <div class="details-container" id="details-4">
+                        <h5 class="font-semibold mb-2">Topik Pembelajaran:</h5>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Menyisipkan dan mengontrol audio/video</li>
+                            <li>Membuat dan memformat hyperlink</li>
+                            <li>Interactive buttons dan navigasi</li>
+                            <li>Ekspor untuk web dan digital publishing</li>
+                        </ul>
+                        <h5 class="font-semibold mt-3 mb-2">Praktikum:</h5>
+                        <p>Membuat dokumen interaktif dengan multimedia</p>
+                    </div>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Tanggal 5 -->
+            <div class="material-container left">
+                <div class="material-content">
+                    <h3>5 Agustus 2025</h3>
+                    <p class="duration">08.00 - 15.30 WIB</p>
+                    <h4 class="text-xl font-semibold mb-2">Desain Produk</h4>
+                    <p>Membuat berbagai produk desain komersial.</p>
+                    <button class="detail-button mt-3" onclick="toggleDetails('details-5')">Lihat Detail</button>
+                    <div class="details-container" id="details-5">
+                        <h5 class="font-semibold mb-2">Topik Pembelajaran:</h5>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Prinsip desain untuk banner dan spanduk</li>
+                            <li>Desain kalender dengan tema kreatif</li>
+                            <li>Penyusunan desain untuk kaos dan mug</li>
+                            <li>Desain kemasan produk sederhana</li>
+                            <li>Membuat cover buku yang menarik</li>
+                        </ul>
+                        <h5 class="font-semibold mt-3 mb-2">Praktikum:</h5>
+                        <p>Membuat 3 produk desain dari pilihan peserta</p>
+                    </div>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Tanggal 6 -->
+            <div class="material-container right">
+                <div class="material-content">
+                    <h3>6 Agustus 2025</h3>
+                    <p class="duration">08.00 - 15.30 WIB</p>
+                    <h4 class="text-xl font-semibold mb-2">CorelDRAW - Dasar</h4>
+                    <p>Menggambar shape dan manipulasi objek dasar.</p>
+                    <button class="detail-button mt-3" onclick="toggleDetails('details-6')">Lihat Detail</button>
+                    <div class="details-container" id="details-6">
+                        <h5 class="font-semibold mb-2">Topik Pembelajaran:</h5>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Menggambar shape dasar dan bebas</li>
+                            <li>Teknik transformasi objek</li>
+                            <li>Menggunakan tools shaping (weld, trim, intersect)</li>
+                            <li>Teknik pewarnaan dasar dan gradient</li>
+                        </ul>
+                        <h5 class="font-semibold mt-3 mb-2">Praktikum:</h5>
+                        <p>Membuat logo dengan kombinasi shape dasar</p>
+                    </div>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Tanggal 7 -->
+            <div class="material-container left">
+                <div class="material-content">
+                    <h3>7 Agustus 2025</h3>
+                    <p class="duration">08.00 - 15.30 WIB</p>
+                    <h4 class="text-xl font-semibold mb-2">CorelDRAW - Teks & Gambar</h4>
+                    <p>Pengolahan teks dan pengaturan gambar.</p>
+                    <button class="detail-button mt-3" onclick="toggleDetails('details-7')">Lihat Detail</button>
+                    <div class="details-container" id="details-7">
+                        <h5 class="font-semibold mb-2">Topik Pembelajaran:</h5>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Membuat dan memformat text artistic dan paragraf</li>
+                            <li>Text on path dan text wrapping</li>
+                            <li>Import dan editing gambar bitmap</li>
+                            <li>Membuat background yang efektif</li>
+                        </ul>
+                        <h5 class="font-semibold mt-3 mb-2">Praktikum:</h5>
+                        <p>Membuat poster dengan kombinasi teks dan gambar</p>
+                    </div>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Tanggal 8 -->
+            <div class="material-container right">
+                <div class="material-content">
+                    <h3>8 Agustus 2025</h3>
+                    <p class="duration">08.00 - 15.30 WIB</p>
+                    <h4 class="text-xl font-semibold mb-2">CorelDRAW - Efek Spesial</h4>
+                    <p>Mengaplikasikan efek-efek lanjutan.</p>
+                    <button class="detail-button mt-3" onclick="toggleDetails('details-8')">Lihat Detail</button>
+                    <div class="details-container" id="details-8">
+                        <h5 class="font-semibold mb-2">Topik Pembelajaran:</h5>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Menggunakan efek contour untuk dimensi</li>
+                            <li>Drop shadow dan transparency</li>
+                            <li>Technique blend untuk transisi halus</li>
+                            <li>Distortion dan envelope effects</li>
+                        </ul>
+                        <h5 class="font-semibold mt-3 mb-2">Praktikum:</h5>
+                        <p>Membuat ilustrasi dengan berbagai efek khusus</p>
+                    </div>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Tanggal 9 -->
+            <div class="material-container left">
+                <div class="material-content">
+                    <h3>9 Agustus 2025</h3>
+                    <p class="duration">08.00 - 15.30 WIB</p>
+                    <h4 class="text-xl font-semibold mb-2">Photoshop - Dasar</h4>
+                    <p>Pengelolaan gambar dan seleksi objek.</p>
+                    <button class="detail-button mt-3" onclick="toggleDetails('details-9')">Lihat Detail</button>
+                    <div class="details-container" id="details-9">
+                        <h5 class="font-semibold mb-2">Topik Pembelajaran:</h5>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Memahami berbagai format gambar</li>
+                            <li>Pengelolaan layer yang efektif</li>
+                            <li>Teknik seleksi dasar dan lanjutan</li>
+                            <li>Masking dan compositing dasar</li>
+                        </ul>
+                        <h5 class="font-semibold mt-3 mb-2">Praktikum:</h5>
+                        <p>Editing foto dengan berbagai teknik seleksi</p>
+                    </div>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Tanggal 10 -->
+            <div class="material-container right">
+                <div class="material-content">
+                    <h3>10 Agustus 2025</h3>
+                    <p class="duration">08.00 - 15.30 WIB</p>
+                    <h4 class="text-xl font-semibold mb-2">Photoshop - Editing</h4>
+                    <p>Adjustment gambar dan manipulasi objek.</p>
+                    <button class="detail-button mt-3" onclick="toggleDetails('details-10')">Lihat Detail</button>
+                    <div class="details-container" id="details-10">
+                        <h5 class="font-semibold mb-2">Topik Pembelajaran:</h5>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Color correction dan adjustment</li>
+                            <li>Teknik pembersihan background</li>
+                            <li>Manipulasi objek dengan transform tools</li>
+                            <li>Non-destructive editing dengan smart objects</li>
+                        </ul>
+                        <h5 class="font-semibold mt-3 mb-2">Praktikum:</h5>
+                        <p>Membuat photomontage dengan clean background</p>
+                    </div>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Tanggal 11 -->
+            <div class="material-container left">
+                <div class="material-content">
+                    <h3>11 Agustus 2025</h3>
+                    <p class="duration">08.00 - 15.30 WIB</p>
+                    <h4 class="text-xl font-semibold mb-2">Finalisasi Buku</h4>
+                    <p>Penyempurnaan dokumen buku lengkap.</p>
+                    <button class="detail-button mt-3" onclick="toggleDetails('details-11')">Lihat Detail</button>
+                    <div class="details-container" id="details-11">
+                        <h5 class="font-semibold mb-2">Topik Pembelajaran:</h5>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Desain cover buku yang profesional</li>
+                            <li>Membuat Table of Contents otomatis</li>
+                            <li>Layout konten dengan konsistensi</li>
+                            <li>Formatting daftar pustaka</li>
+                            <li>Preflight dan ekspor untuk printing</li>
+                        </ul>
+                        <h5 class="font-semibold mt-3 mb-2">Praktikum:</h5>
+                        <p>Menyelesaikan satu buku dari draft sampai siap cetak</p>
+                    </div>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Tanggal 12 -->
+            <div class="material-container right">
+                <div class="material-content">
+                    <h3>12 Agustus 2025</h3>
+                    <p class="duration">08.00 - 15.30 WIB</p>
+                    <h4 class="text-xl font-semibold mb-2">Finalisasi Media</h4>
+                    <p>Penyelesaian produk-produk desain.</p>
+                    <button class="detail-button mt-3" onclick="toggleDetails('details-12')">Lihat Detail</button>
+                    <div class="details-container" id="details-12">
+                        <h5 class="font-semibold mb-2">Topik Pembelajaran:</h5>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Finishing touch desain banner/spanduk</li>
+                            <li>Pengecekan desain kalender</li>
+                            <li>Penyempurnaan desain kemasan</li>
+                            <li>Preflight untuk berbagai media output</li>
+                            <li>Presentasi portfolio hasil kerja</li>
+                        </ul>
+                        <h5 class="font-semibold mt-3 mb-2">Praktikum:</h5>
+                        <p>Mempresentasikan 3 karya terbaik selama pelatihan</p>
+                    </div>
+                </div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="mt-16 p-8 bg-white rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold text-blue-800 mb-6">Info Tambahan</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Persyaratan Peserta</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Membawa laptop dengan spesifikasi minimal Core i3/Ryzen 3</li>
+                        <li>Menginstal software Adobe CC (InDesign, Photoshop, Illustrator) atau CorelDRAW</li>
+                        <li>Memiliki mouse eksternal untuk kemudahan desain</li>
+                        <li>Membawa buku catatan atau tablet untuk sketsa</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Metode Pembelajaran</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>30% Teori, 70% Praktikum</li>
+                        <li>Workshop interaktif dengan studi kasus nyata</li>
+                        <li>Individual project dengan bimbingan mentor</li>
+                        <li>Review portfolio di akhir sesi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetails(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === "block") {
+                element.style.display = "none";
+            } else {
+                element.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
